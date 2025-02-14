@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('lester pic/February\ Wallpaper\ iPad\ Pro.jfif') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+        }
+        .entry {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: url('lester pic/download\ \(3\).jfif') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .entry button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background: white;
+            color: #ff758c;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .entry button:hover {
+            background: #ff7eb3;
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            transition: transform 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .card:hover {
+            transform: scale(1.1);
+        }
+        .photos {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .photos img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .photos img:hover {
+            transform: scale(1.2);
+        }
+        h1 {
+            font-size: 28px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .music-button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background: white;
+            color: #ff758c;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .music-button:hover {
+            background: #ff7eb3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="entry" id="entry">
+        <h1>Happy Valentine's Day, Mariel! 🌸</h1>
+        <button onclick="enterSite()">Enter</button>
+    </div>
+    <audio id="background-music" loop>
+        <source src="lester pic/Untitled video - Made with Clipchamp (2).mp4" type="audio/mpeg">
+    </audio>
+    <div class="card hidden" id="card">
+        <h1>Happy Valentine’s Day, Cadiyyy my love!💖</h1>
+        <p>Every day with you feels special, but today,”</p>
+        <p> I just want to remind you how much you mean to me.</p>
+        <div class="photos">
+            <img src="lester pic/photo1.jfif
+            " alt="Photo 1">
+            <img src="lester pic/photo2.jfif" alt="Photo 2">
+            <img src="lester pic/photo3.jfif" alt="Photo 3">
+        </div>
+        <button class="music-button" onclick="toggleMusic()">Stop Music</button>
+    </div>
+    <script>
+        function enterSite() {
+            document.getElementById('entry').classList.add('hidden');
+            document.getElementById('card').classList.remove('hidden');
+            document.body.style.background = "url('lester pic/February\ Wallpaper\ iPad\ Pro.jfif ') no-repeat center center/cover";
+            document.getElementById('background-music').play();
+        }
+        
+        function toggleMusic() {
+            var music = document.getElementById('background-music');
+            var button = document.querySelector('.music-button');
+            if (music.paused) {
+                music.play();
+                button.textContent = "Stop Music";
+            } else {
+                music.pause();
+                button.textContent = "Play Music";
+            }
+        }
+    </script>
+</body>
+</html>
